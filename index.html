@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+	rel="icon"
+	type="image/png"
+	href="/react-3d-portfolio/loxx2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khurram Ali's Portfolio</title>
+    <script type="module" crossorigin src="/react-3d-portfolio/assets/index-DDGczSZa.js"></script>
+    <link rel="stylesheet" crossorigin href="/react-3d-portfolio/assets/index-C7XXuo9m.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        const w = window;
+        const audio = new Audio("./music.mp3");
+        audio.loop = true;
+        audio.autoplay = true;
+        audio.muted = true;
+        audio.play().then(() => {
+            console.log("Muted autoplay started.");
+        });
+        const enableAudioOnFirstInteraction = () => {
+        audio.muted = false;
+        audio.volume = 0.6;
+        audio.play();
+        console.log("Audio unmuted via user interaction.");
+        interactionEvents.forEach(event => {
+            window.removeEventListener(
+	event,
+	enableAudioOnFirstInteraction
+            );
+        });
+    };
+    const interactionEvents = [
+	'click', 
+	'drag',
+	'keyup',
+	'keydown',
+	'keypress',
+	'touchstart'
+    ];
+    interactionEvents.forEach(event => {
+        window.addEventListener(
+	event,
+	enableAudioOnFirstInteraction
+        );
+    });
+    window.addEventListener('keydown', (e) => {
+        let key = e.key.toLowerCase();
+        if (e.key === 'm') {
+            audio.muted = !audio.muted;
+            console.log(`Audio muted state: ${audio.muted}`);
+        }
+    });
+    </script>
+  </body>
+</html>
