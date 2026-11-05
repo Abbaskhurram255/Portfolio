@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import path from 'path'
+import { BASE } from './src/constants'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => {
@@ -20,9 +21,10 @@ export default defineConfig(({ command }) => {
       ),
       "^": path.resolve(
           import.meta.dirname,
-          "./src"
+          "./"
       )
     }
-  }
+  },
+  base: BASE
   }
 })

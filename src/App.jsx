@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
 import {Home, Projects, Contact, About} from './pages'
 import Navbar from './components/Navbar'
+import { BASE } from '@/constants'
 
 const App = () => {
 	return (
@@ -10,10 +11,11 @@ const App = () => {
 			<Router>
 				<Navbar />
 				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/projects" element={<Projects />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/about" element={<About />} />
+					<Route path={`/`} element={<Home />} />
+					<Route path={`${BASE}/`} element={<Home />} />
+					<Route path={`${BASE}/projects`} element={<Projects />} />
+					<Route path={`${BASE}/contact`} element={<Contact />} />
+					<Route path={`${BASE}/about`} element={<About />} />
 				</Routes>
 			</Router>
 		</main>

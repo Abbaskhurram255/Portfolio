@@ -5,7 +5,7 @@ import { contact, arrow } from '../assets/icons'
 const InfoBox = ({ text, link, btnText }) => (
 	<>
 		<div
-			className="bg-green-900/60 p-4 rounded-xl text-gray-100 w-[50%] sm:w-[35%]"
+			className="bg-green-900/60 p-4 rounded-xl text-gray-100 lg:w-[25%] sm:w-[30%] w-[50%] 2xl:text-[1.05rem]"
 		  >
 				{text}
 			<Link

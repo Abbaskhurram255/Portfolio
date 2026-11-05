@@ -1,11 +1,12 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { BASE } from '@/constants'
 
 const NavItem = ({...props}) => {
 	return (
 		<>
 			<NavLink
-				to={props.link}
+				to={`${BASE}${props.link}`}
 				className={
 				({isActive}) =>
 					`${isActive ?
@@ -25,11 +26,11 @@ const Navbar = () => {
 		<>
 			<header className="header">
 				<NavLink
-					to="/"
+					to={`${BASE}/`}
 					className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md transition-[all] ease-in-out duration-1000 hover:shadow-xl hover:scale-110"
 				>
 					<img
-						src="/logo.png"
+						src={`${BASE}/logo.png`}
 						className="w-7 h-6"
 					/>
 				</NavLink>
