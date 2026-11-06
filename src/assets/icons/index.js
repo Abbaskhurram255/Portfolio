@@ -24,6 +24,15 @@ import summiz from './summiz.svg'
 import threads from './threads.svg'
 import arrow from './arrow.svg'
 import contact from './contact.svg'
+import python from './python.svg'
+import pandas from './pandas.svg'
+import numpy from './numpy.svg'
+import sklearn from './sklearn.svg'
+import fastapi from './fastapi.svg'
+import tkinter from './tkinter.svg'
+import pysimplegui from './pysimplegui.svg'
+import pytorch from './pytorch.svg'
+import sqlite from './sqlite.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 
@@ -54,6 +63,15 @@ export {
     threads,
     arrow,
     contact,
+    python,
+    pandas,
+    numpy,
+    sklearn,
+    fastapi,
+    tkinter,
+    pysimplegui,
+    pytorch,
+    sqlite,
     soundon,
     soundoff
 }

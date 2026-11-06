@@ -1,4 +1,8 @@
-import { Suspense, useState } from 'react'
+import {
+	Suspense,
+	useState,
+	useEffect
+} from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import HomeInfo from '../components/HomeInfo'
@@ -6,9 +10,15 @@ import Island from '../models/Island'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
 import Plane from '../models/Plane'
-
+import AOS from 'aos';
 
 const Home = () => {
+	useEffect(() => {
+		AOS.init();
+		AOS.refresh();
+	},
+		[]
+	);
 	const [
 		isRotating, 
 		setIsRotating
@@ -66,7 +76,11 @@ const Home = () => {
 		<section
 			className="w-full h-screen relative"
 		>
-			<div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+			<div
+				className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center"
+				data-aos="zoom-in-down"
+				data-aos-duration="2000"
+			>
 				{
 					currentStage &&
 						<HomeInfo

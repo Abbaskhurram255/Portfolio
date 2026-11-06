@@ -1,3 +1,5 @@
+import { skills } from './skill_constants';
+
 let BASE = "/Portfolio";
 
 BASE = BASE.replace("\\", "/")
@@ -8,4 +10,4 @@ else {
 	BASE = BASE.trim('/');
 }
 
-export { BASE };
+export { BASE, skills };

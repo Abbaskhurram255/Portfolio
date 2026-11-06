@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { contact, arrow } from '../assets/icons'
+import { BASE } from '@/constants'
 
 const InfoBox = ({ text, link, btnText }) => (
 	<>
 		<div
-			className="bg-green-900/60 p-4 rounded-xl text-gray-100 lg:w-[25%] sm:w-[30%] w-[50%] 2xl:text-[1.05rem]"
+			className="bg-green-900/60 p-4 rounded-xl text-gray-100 lg:w-[25%] sm:w-[35%] w-[50%] 2xl:text-[1.025rem]"
 		  >
 				{text}
 			<Link
 				className="block pt-2 w-[30%] text-white hover:text-orange-300 transition-transform ease-in-out duration-800 hover:translate-y-[.125rem] hover:scale-105 hover:shadow-gray-800/20 hover:shadow-lg"
-				to={link}
+				to={`${BASE}${link}`}
 			>
 				{btnText}
 			</Link>

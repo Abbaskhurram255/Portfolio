@@ -1,5 +1,6 @@
 import {
 	useState,
+                useEffect,
 	useRef,
 	Suspense
 } from 'react'
@@ -9,8 +10,13 @@ import Fox from '../models/Fox'
 import Loader from '../components/Loader'
 import useAlert from '../hooks/useAlert'
 import Alert from '../components/Alert'
+import AOS from 'aos';
 
 const Contact = () => {
+	useEffect(() => {
+                    AOS.init();
+                    AOS.refresh();
+                }, []);
 	const formRef = useRef(null);
 	const INITIAL_FORM_FIELDS = {
 		"name": "",
@@ -100,6 +106,9 @@ const Contact = () => {
 				}
 				<div
 					className="flex-1 min-w-[50%] flex flex-col"
+                                                                                data-aos="zoom-in-up"
+                                                                                data-aos-duration="1000"
+                                                                                data-aos-delay="200"
 				>
 					<h1
 						className="head-text"
