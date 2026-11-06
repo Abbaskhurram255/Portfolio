@@ -8,11 +8,11 @@
 	href="/Portfolio/loxx2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khurram Ali's Portfolio</title>
-    <script type="module" crossorigin src="/Portfolio/assets/index-TMW6dTPS.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DVaLX8Nl.css">
+    <script type="module" crossorigin src="/Portfolio/assets/index-Cpd0Zqrw.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-vy-l6UT1.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
     <script>
         const w = window;
         const audio = new Audio("./music.mp3");
@@ -23,11 +23,11 @@
             console.log("Muted autoplay started.");
         });
         const enableAudioOnFirstInteraction = () => {
-        audio.muted = false;
-        audio.volume = 0.6;
-        audio.play();
-        console.log("Audio unmuted via user interaction.");
-        interactionEvents.forEach(event => {
+            audio.muted = false;
+            audio.volume = 0.5;
+            audio.play();
+            console.log("Audio unmuted via user interaction.");
+            interactionEvents.forEach(event => {
             window.removeEventListener(
 	event,
 	enableAudioOnFirstInteraction
