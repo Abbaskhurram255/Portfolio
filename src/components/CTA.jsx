@@ -7,9 +7,11 @@ const CTA = () => {
 		<>
 			<section
 				className="cta bg-green-700 p-6 rounded-2xl"
+				data-aos="flip-up"
+				data-aos-duration="4000"
 			>
 				<p
-					className="cta-text text-gray-200"
+					className="cta-text"
 				>
 					Have a project in mind?
 					<br/>

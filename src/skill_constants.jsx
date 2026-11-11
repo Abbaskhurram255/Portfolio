@@ -1,11 +1,13 @@
 import {
-	meta,
-	shopify,
-	starbucks,
-	tesla
+	p1,
+	p2,
+	p3,
+	dict,
+	music_player,
+	file_finder,
+	alarm
 } from "./assets/images";
 import {
-	car,
 	contact,
 	css,
 	estate,
@@ -202,56 +204,70 @@ export const socialLinks = [
 	{
 		name: 'GitHub',
 		iconUrl: github,
-		link: 'https://github.com/YourGitHubUsername',
+		link: 'https://github.com/abbaskhurram255',
 	},
 	{
 		name: 'LinkedIn',
 		iconUrl: linkedin,
-		link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+		link: 'https://www.linkedin.com/in/Khurram.Ali',
 	}
 ];
 
 export const projects = [
 	{
-		iconUrl: summiz,
+		iconUrl: p1,
 		theme: 'btn-back-yellow',
 		name: 'Klang (Custom Programming Language)',
 		description: 'A huge Domain Specific Programming Language that makes Python feel like Urdu (every famous data science project comes pre-installed, 2+GB in size).',
 		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/klang_setup_final_parts.exe',
 	},
 	{
-		iconUrl: pricewise,
-		theme: 'btn-back-red',
+		iconUrl: p2,
+		theme: 'btn-back-pink',
 		name: 'AyeshaGPT',
 		description: 'My very own Small Language Model (GPT) trained with Pytorch, made alive with CustomTkinter, capable of automation tasks like opening/closing applications, sending emails, sending quick whatsapp messages, reading/editing/deleting files/folders, and much more.',
 		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/AyeshaGPT1.2_beta.exe',
 	},
 	{
-		iconUrl: threads,
+		iconUrl: p3,
 		theme: 'btn-back-green',
-		name: 'Full Stack Threads Clone',
-		description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-		link: 'https://github.com/adrianhajdin/threads',
+		name: 'Kreact',
+		description: 'Another heavy programming language that translates readable Urdu-like React code to javascript.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/kreact_gui_9.1_beta.exe',
 	},
 	{
-		iconUrl: car,
+		iconUrl: nodejs,
 		theme: 'btn-back-blue',
-		name: 'Car Finding App',
-		description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-		link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+		name: 'Review Generator',
+		description: 'A node.js backend used to provide example reviews for an underrated website.',
+		link: 'https://randusers-api.vercel.app/',
 	},
 	{
-		iconUrl: snapgram,
+		iconUrl: dict,
+		theme: 'btn-back-red',
+		name: 'kDictionary',
+		description: 'An English to Urdu dictionary made with Python.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/ayeshdict.exe',
+	},
+	{
+		iconUrl: music_player,
+		theme: 'btn-back-orange',
+		name: 'kMusicPlayer',
+		description: 'A Python Music Player application with attractive user interface that can speak.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/kMusicPlayer1.1.exe',
+	},
+	{
+		iconUrl: file_finder,
 		theme: 'btn-back-pink',
-		name: 'Full Stack Instagram Clone',
-		description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-		link: 'https://github.com/adrianhajdin/social_media_app',
+		name: 'File Finder',
+		description: 'A File Finder utility that can help find hidden files in a directory.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/file_finder_0.0.0.0.exe',
 	},
 	{
-		iconUrl: estate,
-		theme: 'btn-back-black',
-		name: 'Real-Estate Application',
-		description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-		link: 'https://github.com/adrianhajdin/projects_realestate',
-	},
+		iconUrl: alarm,
+		theme: 'btn-back-yellow',
+		name: 'kAlarm',
+		description: 'No more forgotten meetings. Fix an schedule, get commited to it.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/kAlarm.exe',
+	}
 ];
