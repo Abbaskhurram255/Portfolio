@@ -6,7 +6,7 @@ import { BASE } from '@/constants'
 const InfoBox = ({ text, link, btnText }) => (
 	<>
 		<div
-			className="bg-green-900/60 p-4 rounded-xl text-gray-100 lg:w-[25%] sm:w-[35%] w-[50%] 2xl:text-[1.025rem]"
+			className="bg-green-900/60 p-4 rounded-xl text-gray-100 lg:w-[25%] w-[50%] 2xl:text-[1.025rem]"
 		  >
 				{text}
 			<Link

@@ -141,8 +141,8 @@ export const skills = [
 export const experiences = [
 	{
 		title: "React.js Developer",
-		company_name: "Starbucks",
-		icon: starbucks,
+		company_name: "Star Software House, Malir",
+		icon: react,
 		iconBg: "#accbe1",
 		date: "March 2020 - April 2021",
 		points: [
@@ -153,41 +153,41 @@ export const experiences = [
 		],
 	},
 	{
-		title: "React Native Developer",
-		company_name: "Tesla",
-		icon: tesla,
+		title: "ML Developer",
+		company_name: "House of Data Software House, Nazimabad",
+		icon: sklearn,
 		iconBg: "#fbc3bc",
 		date: "Jan 2021 - Feb 2022",
 		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
+			"Developed and maintained data applications using Streamlit, Dash, and other related technologies (PyTorch, OpenCV, Matplotlib, Seaborn, Plotly).",
+			"Cleaned multiple datasets, and made an analysis of the data.",
+			"Implemented classification of data among various different contexts (regression with LinearRegression & HistGradientBoostingRegressor, and classification with LogisticRegression & KNeighborsClassifier.)",
 			"Participating in code reviews and providing constructive feedback to other developers.",
 		],
 	},
 	{
 		title: "Backend Developer",
-		company_name: "Star Software House",
-		icon: shopify,
+		company_name: "SnS (SoftnSoft) Software House, Malir",
+		icon: nodejs,
 		iconBg: "#b7e4c7",
 		date: "Jan 2022 - Jan 2023",
 		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
+			"Developing and maintaining web applications using Node.js and other related technologies.",
 			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
+			"Implementing no-delay server design and ensuring cross-browser compatibility.",
 			"Participating in code reviews and providing constructive feedback to other developers.",
 		],
 	},
 	{
-		title: "FastAPI Developer",
-		company_name: "Meta",
-		icon: meta,
-		iconBg: "#a2d2ff",
+		title: "FastAPI Backend Developer",
+		company_name: "AI-tomation Software House, Quaidabad",
+		icon: fastapi,
+		iconBg: "#92d2cc",
 		date: "Jan 2023 - Present",
 		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
+			"Developing and maintaining web backends using FastAPI, BeautfulSoup, and other related technologies.",
 			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
+			"Implementing no-delay server design and ensuring cross-browser compatibility.",
 			"Participating in code reviews and providing constructive feedback to other developers.",
 		],
 	},
@@ -213,11 +213,18 @@ export const socialLinks = [
 
 export const projects = [
 	{
+		iconUrl: summiz,
+		theme: 'btn-back-yellow',
+		name: 'Klang (Custom Programming Language)',
+		description: 'A huge Domain Specific Programming Language that makes Python feel like Urdu (every famous data science project comes pre-installed, 2+GB in size).',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/klang_setup_final_parts.exe',
+	},
+	{
 		iconUrl: pricewise,
 		theme: 'btn-back-red',
-		name: 'Amazon Price Tracker',
-		description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-		link: 'https://github.com/adrianhajdin/pricewise',
+		name: 'AyeshaGPT',
+		description: 'My very own Small Language Model (GPT) trained with Pytorch, made alive with CustomTkinter, capable of automation tasks like opening/closing applications, sending emails, sending quick whatsapp messages, reading/editing/deleting files/folders, and much more.',
+		link: 'https://github.com/Abbaskhurram255/hindCPlusPlus/releases/download/0.8b4/AyeshaGPT1.2_beta.exe',
 	},
 	{
 		iconUrl: threads,
@@ -247,11 +254,4 @@ export const projects = [
 		description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
 		link: 'https://github.com/adrianhajdin/projects_realestate',
 	},
-	{
-		iconUrl: summiz,
-		theme: 'btn-back-yellow',
-		name: 'AI Summarizer Application',
-		description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-		link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-	}
 ];

@@ -1,6 +1,12 @@
 import { useEffect } from 'react';
-import { skills } from '@/constants';
+import { skills, experiences } from '@/constants';
 import AOS from 'aos';
+import {
+	VerticalTimeline,
+	VerticalTimelineElement
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import CTA from '../components/CTA'
 
 const About = () => {
     useEffect(() => {
@@ -21,7 +27,7 @@ const About = () => {
                 >
                     Hello, I'm
                      <pre
-                        className="text-green-700 font-semibold drop-shadow animate__animated animate__zoomInDown animate__delay-.25s"
+                        className="text-green-700 font-semibold drop-shadow animate__animated animate__zoomInDown animate__duration-5s animate__delay-.5s"
                     >
                         Khurram Ali
                     </pre>
@@ -56,7 +62,7 @@ const About = () => {
                                                 className="block-container w-20 h-20"
                                             >
                                                     <div
-			        className="btn-back rounded-4xl"
+			        className="btn-back rounded-2xl"
                                                     />
                                                     <div
                                                         className="btn-front rounded-xl flex justify-center items-center"
@@ -92,10 +98,71 @@ const About = () => {
                                Worked with all sorts of companies, leveling up my skill, and teaming with smart people. Here's the rundown:
                            </p>
                    </div>
-                   <div>
-                       
+                   <div
+                       className="mt-12 flex"
+                   >
+                       <VerticalTimeline>
+                           {experiences.map(experience => (
+                               <VerticalTimelineElement
+                                   key={experience.company_name}
+                                   date={experience.date}
+                                   icon={
+                                       <div
+                                           className="flex justify-center items-center w-full h-full"
+                                       >
+                                           <img
+                                               src={experience.icon}
+                                               alt={experience.company_name}
+                                               className="w-[60%] h-[60%] object-contain transition-all duration-2000 hover:scale-200 hover:rotate-[90deg]"
+                                           />
+                                       </div>
+                                   }
+                                   contentStyle={{
+                                       'borderBottom': '8px',
+                                       'borderStyle': 'solid',
+                                       'borderBottomColor': experience.iconBg,
+                                       'boxShadow': 'none'
+                                   }}
+                                   iconStyle={{
+                                       background: experience.iconBg
+                                   }}
+                                   data-aos="fade-down"
+                                   data-aos-duration="300"
+                               >
+                                   <div>
+                                       <h3
+                                           className="text-black text-xl font-poppins font-semibold transition-all duration-1000 hover:translate-y-[-5px]"
+                                       >
+                                           {experience.title}
+                                       </h3>
+                                       <p
+                                           className="text-black-500 font-medium font-base"
+                                           style={{margin: 0}}
+                                       >
+                                           {experience.company_name}
+                                       </p>
+                                   </div>
+                                   <ul
+                                       className="my-5 list-disc ml-5 space-y-2"
+                                   >
+                                       {experience.points.map((point, index) => (
+                                           <li
+                                               key={`experience-point-${index}`}
+                                               className="text-black-500/70 font-normal pl-1 text-sm"
+                                           >
+                                               {point}
+                                           </li>
+                                       ))}
+                                   </ul>
+                               </VerticalTimelineElement>
+                           ))}
+                       </VerticalTimeline>
                    </div>
                 </div>
+                <hr
+                    className="border-gray-200"
+                />
+                <CTA />
             </section>
         </>
     )
