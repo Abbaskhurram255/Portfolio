@@ -19,8 +19,8 @@ const CTA = () => {
 				</p>
 				<Link
 					to={`${BASE}/contact`}
-					className="p-3 text-black bg-yellow-500 transition-all duration-1000 ease-in-out hover:scale-110 hover:drop-shadow hover:bg-yellow-300 rounded-xl"
-					>
+					className="p-3 text-black bg-yellow-500 font-[500] transition-all duration-1000 ease-in-out hover:scale-110 hover:drop-shadow hover:bg-yellow-300 hover:font-[600] rounded-xl"
+				>
 					Contact
 				</Link>
 			</section>

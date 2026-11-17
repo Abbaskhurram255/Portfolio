@@ -10,9 +10,9 @@ const NavItem = ({...props}) => {
 				className={
 				({isActive}) =>
 					`${isActive ?
-						"text-green-500"
+						"text-green-700"
 															:
-						"text-black"} hover:text-gray-200 transition-transform duration-[1s] ease-in-out hover:scale-120 hover:shadow-xl`
+						"text-black"} hover:text-yellow-500 transition-transform duration-[1s] ease-in-out hover:scale-120 hover:shadow-xl`
 					}
 			>
 				{props.text}
@@ -31,7 +31,7 @@ const Navbar = () => {
 				>
 					<img
 						src={`${BASE}/logo.png`}
-						className="w-7 h-6"
+						className="w-7 h-6 rounded-sm"
 					/>
 				</NavLink>
 				<nav

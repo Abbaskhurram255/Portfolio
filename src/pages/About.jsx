@@ -29,7 +29,7 @@ const About = () => {
                      <pre
                         className="text-green-700 font-semibold drop-shadow animate__animated animate__zoomInDown animate__duration-5s animate__delay-.5s"
                     >
-                        Khurram Ali
+                        Khurram <span className="text-yellow-700">Ali</span>
                     </pre>
                 </h1>
                 <div
@@ -65,14 +65,19 @@ const About = () => {
 			        className="btn-back rounded-2xl"
                                                     />
                                                     <div
-                                                        className="btn-front rounded-xl flex justify-center items-center"
+                                                        className="group btn-front rounded-xl flex justify-center items-center hover:translate-y-[.5rem]"
                                                     >
                                                             <img
                                                                 src={skill.imageUrl}
                                                                 alt={skill.name}
                                                                 title={skill.name}
                                                                 className="w-1/2 h-1/2 object-contain transition-all ease-in-out duration-500 hover:translate-[-.5rem] hover:scale-110 hover:skew-y-[1rem] hover:drop-shadow-lg"
-                                                            />                                                                                        
+                                                            />
+                                                            <p
+                                                                className="text-center justify-center text-[.6rem] relative right-6 top-8 group-hover:block group-hover:font-[500] hidden"
+                                                            >
+				{skill.name}
+                                                            </p>
                                                     </div>
                                             </div>
                                         </>
@@ -82,7 +87,7 @@ const About = () => {
                     </div>
                 </div>
                 <div
-                    className="experience-section py-16"
+                    className="lg:mt-6 experience-section py-16"
                     data-aos="flip-up"
                     data-aos-duration="1200"
                 >

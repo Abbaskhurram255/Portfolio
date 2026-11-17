@@ -1,2 +1,2 @@
 @echo off
-npm run dev
+start "" "http://localhost:5173" & npm run dev

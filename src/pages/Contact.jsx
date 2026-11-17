@@ -87,6 +87,9 @@ const Contact = () => {
 				text: 'Message failed to send.',
 				type: 'danger'
 			});
+			setTimeout(() => {
+				hideAlert();
+			}, 60000);
 		});
 	};
 	const handleFocus = (e) => {
@@ -98,7 +101,7 @@ const Contact = () => {
 	return (
 		<>
 			<section
-				className="relative flex lg:flex-row flex-col max-container"
+				className="relative flex lg:flex-row flex-col max-container h-full"
 			>
 				{
 					alert.show
@@ -172,7 +175,7 @@ const Contact = () => {
 						</label>
 						<button
 							type="submit"
-							className="mt-2 text-lg py-1 md:py-2 text-white rounded-md bg-green-800 hover:bg-green-600 transition-transform ease-in-out duration-600 hover:scale-105"
+							className="mt-2 text-lg py-1 md:py-2 text-white rounded-md bg-green-800 hover:bg-yellow-800 hover:text-gray-200 transition-transform ease-in-out duration-600 hover:scale-105"
 							onFocus={handleFocus}
 							onBlur={handleBlur}
 							disabled={isLoading}

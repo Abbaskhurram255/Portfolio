@@ -84,7 +84,11 @@ export function Island({
 
   // Handle keyup events
   const handleKeyUp = (event) => {
-    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    if (
+        ["ArrowLeft", "ArrowRight"].includes(
+                event.key
+        )
+    ) {
       setIsRotating(false);
     }
   };
@@ -118,6 +122,20 @@ export function Island({
       rotationSpeed.current = delta * 0.01 * Math.PI;
     }
   }
+  
+  const wheelTimeout = useRef(null);
+  const handleWheel = (event) => {
+      if (event.deltaY === 0) return;
+      if (!isRotating) setIsRotating(true);
+      const direction = event.deltaY > 0 ? 1 : -1;
+      islandRef.current.rotation.y += direction * 0.005 * Math.PI;
+      rotationSpeed.current = direction * 0.0125;
+      // Reset isRotating 150ms after scrolling stops so damping resumes
+      clearTimeout(wheelTimeout.current);
+      wheelTimeout.current = setTimeout(() => {
+          setIsRotating(false);
+      }, 150);
+  };
 
   useEffect(() => {
     // Add event listeners for pointer and keyboard events
@@ -127,17 +145,19 @@ export function Island({
     canvas.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
+    window.addEventListener("wheel", handleWheel);
     canvas.addEventListener("touchstart", handleTouchStart);
     canvas.addEventListener("touchend", handleTouchEnd);
     canvas.addEventListener("touchmove", handleTouchMove);
 
-    // Remove event listeners when component unmounts
+    // cleanup effect: Remove event listeners when component unmounts
     return () => {
       canvas.removeEventListener("pointerdown", handlePointerDown);
       canvas.removeEventListener("pointerup", handlePointerUp);
       canvas.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("wheel", handleWheel);
       canvas.removeEventListener("touchstart", handleTouchStart);
       canvas.removeEventListener("touchend", handleTouchEnd);
       canvas.removeEventListener("touchmove", handleTouchMove);

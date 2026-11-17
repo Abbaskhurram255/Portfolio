@@ -14,6 +14,13 @@
     <script type="module" src="/src/main.jsx"></script>
     <script>
         const w = window;
+        const [
+            MIN_ALLOWED_VOLUME,
+            MAX_ALLOWED_VOLUME
+        ] = [
+            0.1,
+            0.5
+        ];
         const audio = new Audio("./music.mp3");
         audio.loop = true;
         audio.autoplay = true;
@@ -23,7 +30,7 @@
         });
         const enableAudioOnFirstInteraction = () => {
             audio.muted = false;
-            audio.volume = 0.4;
+            audio.volume = 0.3;
             audio.play();
             console.log("Audio unmuted via user interaction.");
             interactionEvents.forEach(event => {
@@ -49,9 +56,13 @@
     });
     window.addEventListener('keydown', (e) => {
         let key = e.key.toLowerCase();
-        if (e.key === 'm') {
+        if (key === 'm') {
             audio.muted = !audio.muted;
             console.log(`Audio muted state: ${audio.muted}`);
+        } else if (key == 'arrowup') {
+            if (audio.volume + .1 <= MAX_ALLOWED_VOLUME) audio.volume += .1;
+        } else if (key == 'arrowdown') {
+            if (audio.volume - .1 >= MIN_ALLOWED_VOLUME) audio.volume -= .1;
         }
     });
     </script>
