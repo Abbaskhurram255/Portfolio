@@ -15,13 +15,17 @@ export default defineConfig(({ command }) => {
   ],
   resolve: {
     alias: {
-      "@": path.resolve(
-          import.meta.dirname,
-          "./src"
-      ),
       "^": path.resolve(
           import.meta.dirname,
           "./"
+      ),
+      "&": path.resolve(
+          import.meta.dirname,
+          "./public"
+      ),
+      "@": path.resolve(
+          import.meta.dirname,
+          "./src"
       )
     }
   },
