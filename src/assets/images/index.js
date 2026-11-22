@@ -1,4 +1,3 @@
-import hero from './hero.jpg'
 import meta from './meta.png'
 import shopify from './shopify.png'
 import starbucks from './starbucks.png'
@@ -13,7 +12,6 @@ import file_finder from './finder.png'
 import alarm from './alarm.png'
 
 export {
-    hero,
     meta,
     shopify,
     starbucks,

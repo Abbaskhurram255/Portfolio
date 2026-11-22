@@ -7,7 +7,7 @@ import { BASE } from '@/constants'
 
 const App = () => {
 	return (
-		<main className="bg-slate-300/20 h-full">
+		<main className="bg-slate-300/20 h-full w-full overflow-hidden">
 			<Router>
 				<Navbar />
 				<Routes>
